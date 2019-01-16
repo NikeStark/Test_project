@@ -1,0 +1,28 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+background-image:url(Pictures/laptop.png),
+url(Pictures/Picture_desktop.jpg);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+
+}
+
+.Center{
+  cursor:pointer;
+  position: relative;
+  color: red;
+  margin: 68px 214px 0 214px;
+  text-align: center;
+  display:inline-block
+  width: 200px;
+  height: 485px;
+  background:#CDCDCD;
+  font-size: 30px;
+  font-weight: bold;
+  font-style:italic ;
+}
