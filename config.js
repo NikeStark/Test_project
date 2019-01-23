@@ -114,7 +114,85 @@ function write (word){
 	write("<br>");
 	write("You can use it many times"+"<br>");
 
-function summ (a, b) {
-	return a + b;
+function summ (a, b, c) {
+	return (a + b) * c;
 }
-	document.write("Summ = "+summ (15, 15));
+	document.write("Summ = "+summ (12, 13, 4)+"<br>");
+
+	//Objects
+var name_person = {
+	firstName:'Aliaksandr',
+	secondName:'Kazutsin',
+	age: 25,
+	children: ['Anya','Irina'],
+	adress:{
+		country:'Belarus',
+		city:'Gomel',
+		street:'Hataevicha 45_70'
+	},
+	NameAge: function () {
+		return "Your name is " + this.firstName + ", " + 
+		"your age is " + this.age;
+	}
+}
+	console.log(name_person.NameAge());
+ 	document.write("Your name is "+name_person.firstName + ", "+"Your native city is "
+ 	+ name_person.adress.city + ", " + "<br>" + "Your either daughter is " + name_person.children[1]);
+
+//Constructer for create object
+
+var apple = new Object();
+apple.color = 'Green';
+apple.shape = 'Circle';
+
+apple.describe = function (){
+	if (apple.color == 'Black') {
+	return "Not result" + apple.color;
+	} else{
+		return "Color apple is " + apple.color;
+	}
+}
+
+console.log(apple.describe(apple.color));
+
+
+
+function Fruit(name, color) {
+	this.name = name;
+	this.color = color;
+}
+
+var name_fruit_one = new Fruit('banana','yellow');//create object for our function(constructer) with parameters
+var name_fruit_two = new Fruit('mandarin','orange');
+
+	name_fruit_one.describe = function () {
+		return "My favorite fruit is " + this.name + " and ";
+	}
+
+	name_fruit_two.describe = function () {
+		return "My favorite color is " + this.color;
+	}
+
+console.log(name_fruit_one.describe()+name_fruit_two.describe());
+
+
+
+function changeColor (newColor) {
+
+var element = document.getElementById("text");
+element.style.color = newColor;
+
+}
+
+
+
+function validateForm(){
+	var element = document.forms["myForm"] ["fname"].value; // I can tu use this operators with same name It isn't global it's local
+if (element == ""){
+	alert("You need to enter your name");
+	return false; //means without restart a webside page's
+}
+	alert("You're welcome, "+element);
+	alert("Don't forget to visit our official website! Good luck :)");
+	return false;
+}
