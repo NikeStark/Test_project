@@ -120,6 +120,8 @@ function summ (a, b, c) {
 	document.write("Summ = "+summ (12, 13, 4)+"<br>");
 
 	//Objects
+
+
 var name_person = {
 	firstName:'Aliaksandr',
 	secondName:'Kazutsin',
@@ -191,8 +193,9 @@ function validateForm(){
 if (element == ""){
 	alert("You need to enter your name");
 	return false; //means without restart a webside page's
-}
+}	else {
 	alert("You're welcome, "+element);
 	alert("Don't forget to visit our official website! Good luck :)");
-	return false;
+}
+	var element = document.getElementById("myForm").reset();
 }
